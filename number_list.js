@@ -1,5 +1,10 @@
-var n = prompt("Enter a number greater than one");
- 
- for (var i = 1; i < n; i++) {
- 	document.write(i);
- }
+function number_list(n){
+	var numList =[];
+
+	for(var i = 0; i <=n; i++){
+		//numList.push(i);
+	}
+	return numList;
+
+
+}

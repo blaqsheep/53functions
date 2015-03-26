@@ -11,24 +11,24 @@ var assert = {
 		newElement.className = "test";
 		document.getElementById("tests").appendChild(newElement);
 
-		var myDiv = new RedOrGreen("myElement");
+		var myDiv = new RedOrGreen(newElement.id);
 
 		if(expectedResults === returnResults){
 			passed++;
 			myDiv.makeGreen();
-			//document.getElementById(newElement.id).innerHTML='Expecting "'+expectedResults+' Recieved "'+returnResults+'" Test passed!';
+			document.getElementById(newElement.id).innerHTML='Expecting "'+expectedResults+' Recieved "'+returnResults+'" Test passed!';
 			
 		}
 		else{
 			failed++;
 			myDiv.makeRed();
-			//document.getElementById(newElement.id).innerHTML='Expecting "'+ returnResults+'"" Recieved " '+expectedResults+' ", thus test failed!';
+			document.getElementById(newElement.id).innerHTML='Expecting "'+ returnResults+'"" Recieved " '+expectedResults+' ", thus test failed!';
 		}
 
 		total = passed + failed;
 
 		//document.getElementById(newElement.id).innerHTML= 'passed: '+passed;
-		document.getElementById("myElement").innerHTML='Passed: '+passed+' Failed: '+failed+' Total tests: '+total;
+		document.getElementById("progress").innerHTML='Passed: '+passed+' Failed: '+failed+' Total tests: '+total;
 		//document.write(expectedResults)
 	}
 };

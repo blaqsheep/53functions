@@ -1,4 +1,4 @@
-var userName = prompt("Input your username ");
+var userName = prompt("Input your Name ");
 
 function hello_uppercase(){
 	return ("hello, ");

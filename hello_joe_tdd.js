@@ -11,7 +11,7 @@ var assert = {
 		newElement.className = "test";
 		document.getElementById("tests").appendChild(newElement);
 
-		var myDiv = new RedOrGreen("myElement");
+		var myDiv = new RedOrGreen(newElement.id);
 
 		if(expectedResults === returnResults){
 			passed++;
